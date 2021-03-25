@@ -11,7 +11,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
 
   rgbmicroservice:
-    build: ../rgbmicroservice
+    build: rgbmicroservice
     restart: "no"
     labels:
       - "traefik.enable=true"
