@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   reverse-proxy:
     image: traefik
@@ -10,12 +10,12 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 
-#  <microservice-example-name>:
-#    build: <microservice-example-name>
-#    restart: "no"
-#    labels:
-#      - "traefik.enable=true"
-#      - "traefik.http.routers.<microservice-example-name>.rule=PathPrefix(`/<microservice-example-name>`)"
-#      - "traefik.http.routers.<microservice-example-name>.middlewares=<microservice-example-name>-stripprefix"
-#      - "traefik.http.services.<microservice-example-name>.loadbalancer.server.port=3000"
-#      - "traefik.http.middlewares.<microservice-example-name>-stripprefix.stripprefix.prefixes=/<microservice-example-name>"
+  rgbmicroservice:
+    build: ../rgbmicroservice
+    restart: "no"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.rgbmicroservice.rule=PathPrefix(`/HexService/FromHexToRgb`)"
+      - "traefik.http.routers.rgbmicroservice.middlewares=rgbmicroservice-stripprefix"
+      - "traefik.http.services.rgbmicroservice.loadbalancer.server.port=3000"
+      - "traefik.http.middlewares.rgbmicroservice-stripprefix.stripprefix.prefixes=/HexService/FromHexToRgb"

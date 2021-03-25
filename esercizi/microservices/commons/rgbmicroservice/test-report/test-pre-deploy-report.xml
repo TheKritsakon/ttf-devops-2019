@@ -1,0 +1,13 @@
+<testsuites name="Mocha Tests">
+  <testsuite name="test per hex to rgb" tests="1" errors="0" failures="0" skipped="0" timestamp="2021-03-25T15:58:22" time="0.014">
+    <testcase classname="test per hex to rgb" name="Happy path test one" time="0.01">
+      <system-out><![CDATA[colore iniziale:fff
+colore convertito:255,255,255
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="TEST REST API HexToRgb" tests="1" errors="0" failures="0" skipped="0" timestamp="2021-03-25T15:58:22" time="0.054">
+    <testcase classname="TEST REST API HexToRgb" name="Happy Path" time="0.052">
+    </testcase>
+  </testsuite>
+</testsuites>

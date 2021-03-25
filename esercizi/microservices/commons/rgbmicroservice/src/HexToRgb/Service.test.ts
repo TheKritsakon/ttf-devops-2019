@@ -7,14 +7,14 @@ const should = chai.should();
 
 export const testData: testFromHexToRgb[] = [
   {
-    input: "#ffff",
+    input: "fff",
     expected: [255, 255, 255],
   },
 ];
 
-describe("test per hex to reg", () => {
+describe("test per hex to rgb", () => {
   testData.forEach((test) => {
-    it(`test case description`, () => {
+    it(`Happy path test one`, () => {
       convertFromHexToRgb(test.input).should.deep.equal(test.expected);
     });
   });
